@@ -19,6 +19,9 @@ from data_reader import DataReader
 from hyper_param import param_dict as pd
 from replay_buffer import RB
 
+tf.disable_eager_execution()
+tf.logging.set_verbosity(tf.logging.ERROR)
+
 g_working_mode = 'local_train'
 g_training = False
 # replay buffer
